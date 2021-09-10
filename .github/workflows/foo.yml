@@ -15,6 +15,8 @@ jobs:
         run: echo running
       - id: step2
         run: echo '${{ toJSON(github.event.workflow_run) }}'
+      - id: step3
+        run: echo '${{ toJSON(github) }}'
   job2:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.job1.outputs.output1 == 'hello' }}
