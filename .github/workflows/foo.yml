@@ -1,7 +1,7 @@
 on:
   workflow_run:
     workflows:
-      - Run Tests
+      - main
     branches:
       - daily_builds
     types:
