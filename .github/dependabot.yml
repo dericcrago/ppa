@@ -14,3 +14,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+  - package-ecosystem: "pip"
+    target-branch: "dependabot_2.8"
+    directory: "/"
+    ignore:
+      - dependency-name: "ansible"
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+    schedule:
+      interval: "daily"
