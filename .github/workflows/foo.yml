@@ -13,6 +13,8 @@ jobs:
     steps:
       - id: step1
         run: echo running
+      - id: step2
+        run: echo ${{ github.event.workflow_run }}
   job2:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.job1.outputs.output1 == 'hello' }}
