@@ -9,11 +9,16 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    steps:
+      - id: step1
+        run: echo running
+  job2:
+    runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.job1.outputs.output1 == 'hello' }}
     steps:
       - id: step1
         run: echo ${{ github.event.workflow_run.job1.outputs.output1 }}
-  job2:
+  job3:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.job2.outputs.output1 != 'world' }}
     steps:
