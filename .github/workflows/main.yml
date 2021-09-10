@@ -21,3 +21,4 @@ jobs:
     needs: job1
     steps:
       - run: echo ${{needs.job1.outputs.output1}} ${{needs.job1.outputs.output2}}
+      - run: echo '${{ toJSON(github) }}'
