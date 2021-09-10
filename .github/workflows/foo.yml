@@ -3,7 +3,7 @@ on:
     workflows:
       - main
     branches:
-      - daily_builds
+      - main
     types:
       - completed
 jobs:
