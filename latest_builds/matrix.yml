@@ -164,15 +164,17 @@ ansible-ansible-10:
       version_specifier_set: ">=10.0.0,<11.0.0"
       dists:
         - jammy
-ansible-ansible-11:
-  github_branch: ansible-11
+ansible-ansible-12:
+  github_branch: ansible-12
   launchpad_ppa: ansible
   packages:
     - name: ansible-core
-      version_specifier_set: ">=2.18.0,<2.19.0"
+      version_specifier_set: ">=2.19.0,<2.20.0"
       dists:
         - noble
+        - plucky
     - name: ansible
-      version_specifier_set: ">=11.0.0,<12.0.0"
+      version_specifier_set: ">=12.0.0,<13.0.0"
       dists:
         - noble
+        - plucky
