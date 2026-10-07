@@ -4,19 +4,22 @@ on:
   schedule:
     - cron: "16 16 * * *"
   workflow_dispatch: {}
+permissions:
+  actions: write  # dispatch the build workflows and follow their runs
+  contents: read  # check out the repo
 jobs:
   kick_off_builds:
     name: kick off builds
     runs-on: ubuntu-24.04
     steps:
       - name: check out repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       - name: run latest_builds.py
         env:
           GITHUB_API_URL: ${{ github.api_url }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ github.token }}
           LAUNCHPAD_PROJECT: ${{ secrets.LAUNCHPAD_PROJECT }}
         run: |
           python3 -m pip install --upgrade pip
