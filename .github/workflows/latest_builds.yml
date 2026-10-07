@@ -10,7 +10,7 @@ permissions:
 jobs:
   kick_off_builds:
     name: kick off builds
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     steps:
       - name: check out repo
         uses: actions/checkout@v7
