@@ -55,7 +55,7 @@ for DIST in ${DEB_DIST}; do
     EDITOR=/bin/true dpkg-source --commit . man1
   fi
 
-  debuild -S -k"${DEBSIGN_KEYID}" -p"${DEB_SIGN_PROGRAM}"
+  debuild --no-lintian -S -k"${DEBSIGN_KEYID}" -p"${DEB_SIGN_PROGRAM}"
   cd - || exit
 
   CHANGES="${DIST}"/"${DEB_NAME}"_"${DEB_CHANGELOG_VERSION}"-"${DEB_RELEASE}"~"${DIST}"_source.changes
