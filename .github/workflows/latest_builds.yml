@@ -5,7 +5,8 @@ on:
     - cron: "16 16 * * *"
   workflow_dispatch: {}
 permissions:
-  contents: read
+  actions: write  # dispatch the build workflows and follow their runs
+  contents: read  # check out the repo
 jobs:
   kick_off_builds:
     name: kick off builds
