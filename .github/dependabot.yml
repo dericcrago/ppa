@@ -1,0 +1,53 @@
+---
+# Dependabot reads this file from the default branch only. `target-branch` does not accept wildcards, so each branch that
+# latest_builds/matrix.yml builds from needs its own entry: add one with each new `ansible-N` branch, and remove it when
+# the branch is retired. Dependabot keeps each action's existing style, so a branch must already be pinned to a SHA for
+# its updates to stay pinned.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-15
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-14
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-13
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-12
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-11
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-10
+    schedule:
+      interval: monthly
+
+  - package-ecosystem: github-actions
+    directory: /
+    target-branch: ansible-9
+    schedule:
+      interval: monthly
